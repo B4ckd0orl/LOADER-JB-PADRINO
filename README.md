@@ -28,7 +28,7 @@
 
 | Archivo | Tamaño | Para qué |
 |---|---|---|
-| **`LOADER JB PADRINO.exe`** | 17,1 MB | ⭐ El ejecutable. Descárgalo y ábrelo con doble clic. |
+| **`LOADER JB PADRINO.exe`** | 14,3 MB | ⭐ El ejecutable con icono. Descárgalo y ábrelo con doble clic. |
 
 > 💾 **Doble clic y listo.** No hay instalador, no hay configuración previa, no hay carpetas que copiar.
 
@@ -114,9 +114,23 @@ Se abrirá una ventana de consola con el título
 **`LOADER JB PADRINO`** y verás algo así:
 
 ```
-                Loader Padrino v0.7.1
-...
-Esperando el PS5
+  LOADER JB PADRINO  v0.7.1
+  PS5 User's Guide host · t.me/padrinostores
+  ─────────────────────────────────────────────
+
+  Servidores
+    DNS     UDP 53    manuals.playstation.net -> 192.168.1.X
+    HTTPS   TCP 443   certificado auto-firmado
+
+  IP PARA EL PS5
+    192.168.1.X
+
+    Ajustes  ->  Red  ->  Configurar conexión  ->  Personalizado
+    DNS primaria:    192.168.1.X
+    DNS secundaria:  8.8.8.8
+    Al terminar: INGRESA EL DNS 127.0.0.1 OBLIGATORIAMENTE Y NO LO CAMBIES MAS!
+
+  Esperando el PS5. Abre Ajustes -> Guía del usuario.
 ```
 
 > ⚠️ **El puerto 443 debe estar libre.** Si algo lo usa, el loader te lo
@@ -130,7 +144,7 @@ Usar Wi-Fi → Personalizada → DNS → Manual**
 | Campo | Valor |
 |---|---|
 | DNS primaria | `IP de tu PC` *(la que muestre el loader)* |
-| DNS secundaria | `0.0.0.0` |
+| DNS secundaria | `8.8.8.8` |
 
 ### 3️⃣ Abre la Guía del usuario
 En la PS5: **Configuración → Guía del usuario**.
@@ -139,6 +153,14 @@ La consola se conectará a tu PC y el loader arrancará solo.
 ### 4️⃣ Deja que trabaje
 El loader manda el payload principal y, al terminar, ejecuta
 la **Fase 2** automáticamente. No toques nada hasta el final.
+
+### 5️⃣ Fija el DNS final (obligatorio)
+Cuando el loader termine, entra a la consola y pon:
+
+**Configuración → Red → DNS primaria → `127.0.0.1`**
+
+> 🔒 **Déjalo ahí y no lo vuelvas a cambiar.** El DNS local (`nanodns`)
+> es parte del jailbreak; si lo vuelves a Automático pierdes el DNS local.
 
 ---
 
@@ -157,6 +179,8 @@ la **Fase 2** automáticamente. No toques nada hasta el final.
 | `--verbose` | Registra cada evento DNS, TLS y HTTP |
 | `--extract [DIR]` | Extrae el bundle embebido a una carpeta y sale |
 | `--no-color` | Desactiva los colores ANSI |
+| `--no-open` | No abre el canal de Telegram al arrancar |
+| `--open` | Fuerza abrir el canal aunque se pase cualquier argumento |
 
 **Ejemplos**
 
