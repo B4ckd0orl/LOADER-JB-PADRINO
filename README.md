@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/icono.png" width="120" alt="LOADER JB PADRINO">
+
 # 🎮 LOADER JB PADRINO
 
 ### *El loader con Fase 2 automática para tu PS5*
@@ -9,34 +11,91 @@
 ![versión](https://img.shields.io/badge/version-v0.7.1-ff1744?style=for-the-badge&logo=playstation&logoColor=white)
 ![firmware](https://img.shields.io/badge/FW-7.00%20%E2%80%93%2013.60-00e5ff?style=for-the-badge)
 ![sistema](https://img.shields.io/badge/system-Windows-0078d4?style=for-the-badge&logo=windows&logoColor=white)
+![tamaño](https://img.shields.io/badge/exe-14.3%20MB-8b5cf6?style=for-the-badge)
 ![licencia](https://img.shields.io/badge/license-GPL--3.0-3ddc84?style=for-the-badge)
 ![estado](https://img.shields.io/badge/status-%E2%9C%85%20ESTABLE-4caf50?style=for-the-badge)
 
 <br>
 
-## 📲 **ÚNETE AL CANAL → [t.me/padrinostores](https://t.me/padrinostores)**
+[![⬇️ DESCARGAR EXE](https://img.shields.io/badge/%E2%AD%90_DESCARGAR-LOADER_JB_PADRINO.exe-22c55e?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/B4ckd0orl/LOADER-JB-PADRINO/releases/latest)
+[![📲 CANAL OFICIAL](https://img.shields.io/badge/%F0%9F%93%93_CANAL-telegram-2AABEE?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/padrinostores)
 
 <br>
 
-**Un solo archivo. Sin instalación. Sin dependencias.**
+**Un solo archivo. Sin instalación. Sin dependencias. Con icono propio.**
 
 </div>
 
 ---
 
-## 🚀 Descarga rápida
+## 📸 Así se ve
 
-| Archivo | Tamaño | Para qué |
-|---|---|---|
-| **`LOADER JB PADRINO.exe`** | 14,3 MB | ⭐ El ejecutable con icono. Descárgalo y ábrelo con doble clic. |
+<div align="center">
 
-> 💾 **Doble clic y listo.** No hay instalador, no hay configuración previa, no hay carpetas que copiar.
+![Interfaz del loader](./assets/loader-ui.png)
+
+*Interfaz limpia: sin `[+]`, sin cajas, sin símbolos raros. Solo colores que hablan.*
+
+</div>
+
+> 🖥️ La ventana de consola también es tuya: título **`LOADER JB PADRINO`**,
+> icono **Padrino Store** y un banner legible con todo lo que necesitas
+> (IP, DNS y el aviso final) de un vistazo.
 
 ---
 
-## ✨ Características
+## ✨ Por qué es mejor
 
 <table>
+<tr>
+<td width="50%">
+
+### 🎨 Interfaz rediseñada
+Se acabaron los `[+]`, `[*]` y las cajas de dibujo. **Texto limpio,
+colores semánticos** y un separador fino para el bloque Lua.
+
+</td>
+<td width="50%">
+
+### 🖼️ Icono propio
+El medallón **Padrino Store** en el exe, en el acceso directo y en
+la barra de tareas. Nada de icono genérico de Python.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🚀 Más rápido
+HTTP/1.1 **keep-alive** + **caché en RAM**: cada ELF se descifra una
+vez, no en cada petición. Menos idas y vueltas, cargas más rápidas.
+
+</td>
+<td width="50%">
+
+### 🛡️ Estabilidad real
+El logging va en su **hilo propio**: si la consola de salida se bloquea,
+el servidor **no se cuelga**. Timeout de 30 s y una sola instancia
+a la vez (doble clic de más ya no rompe nada).
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📲 Telegram al abrir
+Doble clic y se abre **[t.me/padrinostores](https://t.me/padrinostores)**
+solo. En tests o pipelines jamás se mete (`--no-open` para apagarlo).
+
+</td>
+<td width="50%">
+
+### 🔒 Anti-consola-muda
+Si el ELF principal no se puede descargar, **se aborta ANTES del
+exploit**. Nunca más una PS5 cargada a medias sin ningún mensaje.
+
+</td>
+</tr>
 <tr>
 <td width="50%">
 
@@ -47,41 +106,9 @@ Nada de versiones inventadas ni etiquetas falsas.
 </td>
 <td width="50%">
 
-### ⚡ Fase 2 automática
-Al terminar de cargar el loader principal, lanza **4 payloads extra**
-en cadena, con pausa de 4 s entre cada uno.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🛡️ Anti-cuelgue
-Si algo falla, el error **se queda impreso en pantalla** y espera a que
-pulses `ENTER`. Se acabaron las ventanas que desaparecen solas.
-
-</td>
-<td width="50%">
-
-### 🇪🇸 Mensajes en español
-Reintentos y avisos con textos claros y amigables,
+### 🇪🇸 Español y claro
+Reintentos, avisos y errores en textos que se entienden,
 sin cadenas técnicas crípticas.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🔍 Autodiagnóstico
-`--verbose` registra cada evento DNS, TLS y HTTP
-para que puedas ver exactamente qué pasa.
-
-</td>
-<td width="50%">
-
-### 📦 Bundle embebido
-Todos los payloads viajan **dentro del propio ejecutable**.
-Nada que descargar aparte, nada que instalar.
 
 </td>
 </tr>
@@ -89,29 +116,33 @@ Nada que descargar aparte, nada que instalar.
 
 ---
 
-## 📦 Payloads incluidos (Fase 2)
+## 🧬 Cómo funciona
 
-Se ejecutan **siempre después** de que el loader principal termina,
-uno a uno y en este orden exacto:
+```mermaid
+flowchart LR
+    A[🖱️ Doble clic<br>en el exe] --> B[🌐 DNS :53<br>+ HTTPS :443]
+    B --> C[📺 PS5:<br>Guía del usuario]
+    C --> D[💥 Exploit<br>Relapse]
+    D --> E[📦 Loader<br>Padrino.elf]
+    E --> F[⚡ Fase 2<br>4 payloads en cadena]
+    F --> G[🔒 DNS primaria<br>127.0.0.1]
 
-| # | Payload | Tamaño | Función |
-|---|---|---|---|
-| 1 | `ShadowMountPlus_1.7beta11.elf` | 3,6 MB | Montaje de sombra |
-| 2 | `ps4mount.elf` | 1,5 MB | Montaje PS4 |
-| 3 | `web-file-mgr-v1.14.elf` | 855 KB | Gestor de archivos |
-| 4 | `nanodns.elf` | 132 KB | DNS local *(siempre al final)* |
-
-+ **`Loader Padrino.elf`** → el payload principal.
+    style A fill:#1f2937,stroke:#E8B84B,color:#fff
+    style B fill:#1f2937,stroke:#00e5ff,color:#fff
+    style C fill:#1f2937,stroke:#00e5ff,color:#fff
+    style D fill:#7f1d1d,stroke:#ef4444,color:#fff
+    style E fill:#14532d,stroke:#22c55e,color:#fff
+    style F fill:#14532d,stroke:#22c55e,color:#fff
+    style G fill:#713f12,stroke:#E8B84B,color:#fff
+```
 
 ---
 
-## 🕹️ Guía de uso
+## 🕹️ Guía de uso (5 pasos)
 
 ### 1️⃣ Abre el loader en tu PC
-Doble clic en **`LOADER JB PADRINO.exe`**.
-
-Se abrirá una ventana de consola con el título
-**`LOADER JB PADRINO`** y verás algo así:
+Doble clic en **`LOADER JB PADRINO.exe`** (se abre el canal de Telegram
+y la ventana de consola con el título correcto):
 
 ```
   LOADER JB PADRINO  v0.7.1
@@ -154,17 +185,39 @@ La consola se conectará a tu PC y el loader arrancará solo.
 El loader manda el payload principal y, al terminar, ejecuta
 la **Fase 2** automáticamente. No toques nada hasta el final.
 
-### 5️⃣ Fija el DNS final (obligatorio)
+### 5️⃣ Fija el DNS final *(obligatorio)*
 Cuando el loader termine, entra a la consola y pon:
 
-**Configuración → Red → DNS primaria → `127.0.0.1`**
+### 🔒 **Configuración → Red → DNS primaria → `127.0.0.1`**
 
-> 🔒 **Déjalo ahí y no lo vuelvas a cambiar.** El DNS local (`nanodns`)
+> **Déjalo ahí y no lo vuelvas a cambiar.** El DNS local (`nanodns`)
 > es parte del jailbreak; si lo vuelves a Automático pierdes el DNS local.
 
 ---
 
+## 📦 Payloads incluidos (Fase 2)
+
+Se ejecutan **siempre después** de que el loader principal termina,
+uno a uno y en este orden exacto:
+
+| # | Payload | Tamaño | Función |
+|---|---|---|---|
+| 1 | `ShadowMountPlus_1.7beta11.elf` | 3,6 MB | Montaje de sombra |
+| 2 | `ps4mount.elf` | 1,5 MB | Montaje PS4 |
+| 3 | `web-file-mgr-v1.14.elf` | 855 KB | Gestor de archivos |
+| 4 | `nanodns.elf` | 132 KB | DNS local *(siempre al final)* |
+
++ **`Loader Padrino.elf`** → el payload principal.
+
+> ⏱️ Entre cada payload hay una **pausa de 4 segundos** (patrón oficial):
+> sin esa pausa, las carreras de inicialización crashean la consola.
+
+---
+
 ## 🎛️ Opciones avanzadas
+
+<details>
+<summary><b>Ver todas las banderas</b></summary>
 
 | Opción | Descripción |
 |---|---|
@@ -191,6 +244,8 @@ Cuando el loader termine, entra a la consola y pon:
 & ".\LOADER JB PADRINO.exe" --extract .\out      # sacar el bundle
 ```
 
+</details>
+
 ---
 
 ## 🧩 Firmware compatible
@@ -213,20 +268,39 @@ La interfaz muestra **la firmware real** detectada en tu consola en todo momento
 
 ## ❓ Preguntas frecuentes
 
-**¿Se cierra solo la ventana en cuanto falla?**
-No. Desde ahora, en una **salida con error fatal** el loader imprime el
-mensaje y espera a que pulses `ENTER`. En usos normales o con la salida
-redirigida a un archivo, sale directamente sin pausar.
+<details>
+<summary><b>¿Se cierra solo la ventana en cuanto falla?</b></summary>
 
-**¿Tengo que instalar algo?**
+No. En una **salida con error fatal** el loader imprime el mensaje y
+espera a que pulses `ENTER`. En usos normales o con la salida redirigida
+a un archivo, sale directamente sin pausar.
+</details>
+
+<details>
+<summary><b>¿Tengo que instalar algo?</b></summary>
+
 No. Es un ejecutable único con todo embebido.
+</details>
 
-**¿Puedo probarlo en el navegador del PC?**
+<details>
+<summary><b>¿Puedo probarlo en el navegador del PC?</b></summary>
+
 Sí: añade `--http-port 8080` y abre `http://127.0.0.1:8080`.
+</details>
 
-**¿Y si el puerto 443 está ocupado?**
+<details>
+<summary><b>¿Y si el puerto 443 está ocupado?</b></summary>
+
 Verás el error en pantalla sin que la ventana desaparezca. Cierra el
 programa que lo use (u otro loader abierto) y vuelve a intentarlo.
+</details>
+
+<details>
+<summary><b>¿Y si abro el exe dos veces sin querer?</b></summary>
+
+El segundo aviso te lo dice y sale solo: **solo puede haber una instancia
+a la vez**, así nunca quedan dos servidores peleando por los puertos.
+</details>
 
 ---
 
@@ -247,8 +321,12 @@ Distribuido bajo **GNU GPL v3.0** — consulta el archivo [`LICENSE`](./LICENSE)
 
 <div align="center">
 
+<img src="./assets/icono.png" width="64" alt="LOADER JB PADRINO">
+
 ### 📲 **[t.me/padrinostores](https://t.me/padrinostores)**
 
 **LOADER JB PADRINO** · v0.7.1
+
+*Hecho para que solo tengas que hacer doble clic.*
 
 </div>
