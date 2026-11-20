@@ -8,7 +8,7 @@
 
 <br>
 
-![versión](https://img.shields.io/badge/version-v0.7.1-ff1744?style=for-the-badge&logo=playstation&logoColor=white)
+![versión](https://img.shields.io/badge/version-v1.0-ff1744?style=for-the-badge&logo=playstation&logoColor=white)
 ![firmware](https://img.shields.io/badge/FW-7.00%20%E2%80%93%2013.60-00e5ff?style=for-the-badge)
 ![sistema](https://img.shields.io/badge/system-Windows-0078d4?style=for-the-badge&logo=windows&logoColor=white)
 ![tamaño](https://img.shields.io/badge/exe-14.3%20MB-8b5cf6?style=for-the-badge)
@@ -133,7 +133,7 @@ Doble clic en **`LOADER JB PADRINO.exe`** (se abre el canal de Telegram
 y la ventana de consola con el título correcto):
 
 ```
-  LOADER JB PADRINO  v0.7.1
+  LOADER JB PADRINO  v1.0
   PS5 User's Guide host · t.me/padrinostores
   ─────────────────────────────────────────────
 
@@ -144,12 +144,25 @@ y la ventana de consola con el título correcto):
   IP PARA EL PS5
     192.168.1.X
 
-    Ajustes  ->  Red  ->  Configurar conexión  ->  Personalizado
-    DNS primaria:    192.168.1.X
-    DNS secundaria:  8.8.8.8
-    Al terminar: INGRESA EL DNS 127.0.0.1 OBLIGATORIAMENTE Y NO LO CAMBIES MAS!
+  PASOS DE EJECUCION
 
-  Esperando el PS5. Abre Ajustes -> Guía del usuario.
+    1.  Ajustes -> Red -> Configuración -> Personalizado
+        DNS primaria:    192.168.1.X
+        DNS secundaria:  8.8.8.8   (opcional)
+
+    2.  Ajustes -> Guía del usuario
+        (el loader arranca solo y empieza a cargar)
+
+    3.  Al terminar: Ajustes -> Red -> DNS primaria: 127.0.0.1
+        OBLIGATORIO - no lo cambies mas
+
+    4.  Reinicia la consola y disfruta de tu jailbreak
+
+Esperando el PS5...
+
+  Cuando termine la carga en la consola:
+    Ajustes -> Red -> DNS primaria: 127.0.0.1
+    Reinicia la consola y disfruta de tu jailbreak
 ```
 
 > ⚠️ **El puerto 443 debe estar libre.** Si algo lo usa, el loader te lo
@@ -163,7 +176,7 @@ Usar Wi-Fi → Personalizada → DNS → Manual**
 | Campo | Valor |
 |---|---|
 | DNS primaria | `IP de tu PC` *(la que muestre el loader)* |
-| DNS secundaria | `8.8.8.8` |
+| DNS secundaria | `8.8.8.8` *(opcional)* |
 
 ### 3️⃣ Abre la Guía del usuario
 En la PS5: **Configuración → Guía del usuario**.
@@ -173,13 +186,14 @@ La consola se conectará a tu PC y el loader arrancará solo.
 El loader manda el payload principal y, al terminar, ejecuta
 la **Fase 2** automáticamente. No toques nada hasta el final.
 
-### 5️⃣ Fija el DNS final *(obligatorio)*
+### 5️⃣ Fija el DNS final y reinicia *(obligatorio)*
 Cuando el loader termine, entra a la consola y pon:
 
 ### 🔒 **Configuración → Red → DNS primaria → `127.0.0.1`**
 
 > **Déjalo ahí y no lo vuelvas a cambiar.** El DNS local (`nanodns`)
 > es parte del jailbreak; si lo vuelves a Automático pierdes el DNS local.
+> Después **reinicia la consola** y disfruta de tu jailbreak.
 
 ---
 
@@ -313,7 +327,7 @@ Distribuido bajo **GNU GPL v3.0** — consulta el archivo [`LICENSE`](./LICENSE)
 
 ### 📲 **[t.me/padrinostores](https://t.me/padrinostores)**
 
-**LOADER JB PADRINO** · v0.7.1
+**LOADER JB PADRINO** · v1.0
 
 *Hecho para que solo tengas que hacer doble clic.*
 
