@@ -118,23 +118,11 @@ sin cadenas técnicas crípticas.
 
 ## 🧬 Cómo funciona
 
-```mermaid
-flowchart LR
-    A[🖱️ Doble clic<br>en el exe] --> B[🌐 DNS :53<br>+ HTTPS :443]
-    B --> C[📺 PS5:<br>Guía del usuario]
-    C --> D[💥 Exploit<br>Relapse]
-    D --> E[📦 Loader<br>Padrino.elf]
-    E --> F[⚡ Fase 2<br>4 payloads en cadena]
-    F --> G[🔒 DNS primaria<br>127.0.0.1]
+<div align="center">
 
-    style A fill:#1f2937,stroke:#E8B84B,color:#fff
-    style B fill:#1f2937,stroke:#00e5ff,color:#fff
-    style C fill:#1f2937,stroke:#00e5ff,color:#fff
-    style D fill:#7f1d1d,stroke:#ef4444,color:#fff
-    style E fill:#14532d,stroke:#22c55e,color:#fff
-    style F fill:#14532d,stroke:#22c55e,color:#fff
-    style G fill:#713f12,stroke:#E8B84B,color:#fff
-```
+![Diagrama de flujo](./assets/flujo.svg)
+
+</div>
 
 ---
 
